@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Background Color Changer</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; transition: background-color 0.3s; }
+    h1 { text-align: center; margin-bottom: 1rem; }
+    .controls { text-align: center; }
+    button { margin: 0 0.5rem; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Background Color Changer</h1>
+  <div class="controls">
+    <button id="redBtn" type="button">Red</button>
+    <button id="greenBtn" type="button">Green</button>
+    <button id="blueBtn" type="button">Blue</button>
+  </div>
+
+  <script>
+    const setBg = color => document.body.style.backgroundColor = color;
+    document.getElementById('redBtn').addEventListener('click', () => setBg('red'));
+    document.getElementById('greenBtn').addEventListener('click', () => setBg('green'));
+    document.getElementById('blueBtn').addEventListener('click', () => setBg('blue'));
+  </script>
+</body>
+</html>
